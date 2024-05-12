@@ -1,5 +1,5 @@
 # MiniStarCenter
-https://www.hbrohei.github.io/MiniStarCenter
+https://www.hbrohei.github.io/MiniStarCenter\
 A website aims to provide information, guides and strategies for Mario Party 9.\
 This repo hosts the site's source files.
 ## Soft launch
