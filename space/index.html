@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spaces - Mini Star Central</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="landing_title">
+        <h1>
+            Spaces of Mario Party 9
+        </h1>
+        <h3>
+            Mini Star Central
+        </h3>
+    </div>
+    <!--TODO Import Google Sheet into here-->
+    <!--<div id="iframe_div">
+    <iframe id="ifr_xls" frameborder="0" height="100000" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQGmsD49S_iVoe6D9Mr-b02a59ozOUT6GH8PO1Azbbocd0bm9Z38gvyoiNuAkUnBQ/pubhtml?gid=899128055&amp;single=true&amp;widget=true&amp;headers=false" onload="//iFrameResize(document.getElementById('ifr_xls'));"></iframe>
+    </div>-->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Space Name</th>
+            <th>Brief Description</th>
+            <th>Technical Detail</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Start</td>
+            <td>The start of the board</td>
+            <td>- When the start space is not presented in a board, &quot;Invalid Read&quot; will be popped out, and sets the start position to 0,0,0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Boss Space</td>
+            <td>The final space of the board, triggers the Final boss minigame in the board</td>
+            <td>- When this space is not presented in a board, &quot;Invalid Read&quot; will be popped out.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Dice Space</td>
+            <td>Gives out a random special dice, and may trigger a minigame or gives out some ministars</td>
+            <td>- Feels like the game would force a minigame  after a certain amount of turns via this space. Needs confirming.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Backward Space</td>
+            <td>Make the player roll a dice to go backwards on the board</td>
+
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Lucky Space</td>
+            <td>Causes the player to enter an event where they can earn ministars</td>
+            <td>- Generally are pipes bonus area or Toad House.<br>- Board-specific:<br>-- Blooper Bay: go to the lucky island / gets the mainisters at the centre of the island<br>- Jackpot Space uses another ID, not this one</td>
+        </tr>
+        <tr>
+            </th>
+            <td>6</td>
+            <td>Unlucky Space</td>
+            <td>Causes the player to enter an event where they can earn miniztars (lose ministars)</td>
+            <td>- Generally are pipes &quot;bonus&quot; area.<br>- Board specific:<br>-- Blooper Bay: Goes to the Blooper whirl (? I forgot)<br>-- Blooper Bay Captain Event: Lose mini stars earned in the Event</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>&quot;Last chance&quot; checkpoint</td>
+            <td>Usually placed at 2/3 of the board, which will gives a slow dice to last place and cause more Bowser Spaces to appear</td>
+            <td>- Bowser Spaces that appears after this are always constant, marked with attribute &quot;-21xxxxxx&quot;<br>- When multiple players are in last, the slow dice are distributed to all of them</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Spin Space</td>
+            <td>Make the player spin a roulette that can steal special dices / ministars from other players, get special dices, or moves once more</td>
+            <td>- All events:<br>1. Get [Type of special dice]<br>2. Item Shuffle<br>3. Exchange Item with another player<br>4. Roll dice once more<br>5. All players must use dice / special dice</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>1 ministar</td>
+            <td>UNCONFIRMED</td>
+
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>3 ministars</td>
+            <td>UNCONFIRMED</td>
+
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Battle Space</td>
+            <td>Cause a battle VS minigame to be played</td>
+            <td>- Either 3 ministers are collected from all player, or 9 ministars will be collected in the minigame&#39;s last place.<br>- Ministars are distributed among players (duh)</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Mid-Boss Spacee</td>
+            <td>Marks the 1/3 - 1/2 of the board. A mini boss minigame will be played. Mandary space.</td>
+            <td>- &quot;Invalid read&quot; will occur when there are none of these in the board<br>- When landed on the second time, it does nothing and proceed to the next player&#39;s turn</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>1v2/3 Space</td>
+            <td>Makes players to play a 1VS3 (2 if 3 players only) minigame. The captain would be in the team of one.</td>
+            <td>- TODO What if there is only 2 player?</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Green Space?</td>
+            <td>UNKNOWN</td>
+
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Bowser Jr MG Space</td>
+            <td>Makes 2 players to play a Bowser Jr minigame</td>
+            <td>- For game that only has 1 human player, that human player will always be playing the minigame</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Split path confirmation</td>
+            <td>Marks a split path point, and makes a prompt for player to choose the direction.</td>
+            <td>- If there is no split path confirmation, the first space referenced in &quot;ms_link&quot; property will be chosen automatically, and no confirmation event will occur.<br>- Always triggers the choosing roulette in Magma Mines</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Empty</td>
+            <td>An empty space that act as a node for guiding the vehicle around. Does not count as passing a space (dice roll -1)</td>
+
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Shuffle Space</td>
+            <td>Shuffles the order of players&#39; turn</td>
+
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Dash Space</td>
+            <td>Have the player to move once more with a normal dice.</td>
+
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>4v Minigame Space</td>
+            <td>Makes players to play a Free-for-all minigame</td>
+
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Happening Space</td>
+            <td>Triggers a board event. Types of events depends on individual boards / sections</td>
+
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Green Space</td>
+            <td>It is certainly a space that can be landed on. Does not do anything, and will proceed to next player&#39;s turn once landed on.</td>
+
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Magma Space (Magma Mines) (+2/3)</td>
+            <td>Raise the magma up by n vertical spaces, where n=2/3/4</td>
+            <td>- Number of spaces rising is defined in the first value of &quot;ms_free8&quot; property<br>-- That means the &quot;+4&quot; magma space may have functionality, not just graphically. NEEDS CHECKING</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>UNKNOWN</td>
+
+            <td>Act like green space, appearance unknown yet</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>DK Space (DK Jungle Ruins)</td>
+            <td>Cause the Banana Spinner to spin, and the player can grab Bananas in this spinner</td>
+            <td>- Act as green space on other boards</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Mini star / ztar (s) space (Pipe Bonus area)
+            </td>
+            <td>Gives out players ministars</td>
+            <td>- Number of ministars are defined in the rel files of the respective boards</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Blank Space (No Texture)</td>
+            <td></td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Blank Space (No Texture)</td>
+            <td></td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Blank Space (No Texture)</td>
+            <td></td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Blank Space (No Texture)</td>
+            <td></td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>Blank Space (No Texture)</td>
+            <td></td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Blank Space (No Texture)</td>
+            <td></td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>Blank Space (No Texture)</td>
+            <td></td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>Captain Event Space</td>
+            <td>Triggers a captain event. The event depends on the section and the board. Mandatory stop.</td>
+
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>
+                Jackpot Space (Bowser Space Station)
+            </td>
+            <td>Release all ministars accumulated in the Jackpot Machine</td>
+            <td>- Different and unique ID from the normal Lucky Space</td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>Blank Space (No Texture)</td>
+            <td>TODO but is it really blank space only?</td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>Bowser Space</td>
+            <td>Causes Bowser to appear and the Bowser Roulette to spin.</td>
+            <td>- At Bowser Space Station, Bowser would be in a Clown Car instead of standing<br>-TODO list of events</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>Mini Ztar Space (1)</td>
+            <td>Gives out players 1 miniztar (Makes the player lose 1 ministar)</td>
+            <td>- Only used in Toad Road</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>Mini Star Space (1)</td>
+            <td>Gives out player 1 ministar</td>
+            <td>-Only used in Toad Road, different than the one used in the pipe bonus area</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>Mini Ztar Space (3)</td>
+            <td>Gives out player 3 miniztars (Maked the player lose 3 ministars)</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>Mini Star Space (3)</td>
+            <td>Gives out player 3 ministars</td>
+
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>Jackpot +5 Space (Bowser Space Station)
+            </td>
+            <td>Adds 5 ministars to the Jackpot Machine total</td>
+            <td rowspan="2">Interestingly, +5 and +8 spaces have their first byte marked with their value as well.</td>
+
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>Jackpot +8 Space (Bowser Space Station)
+            </td>
+            <td>Adds 8 ministars to the Jackpot Machine total</td>
+
+        </tr>
+        <tr>
+            <td>44</td>
+            <td>UNKNOWN</td>
+
+            <td>Invalid read when loaded into stage, acted like 17 otherwise, except they can be checked via &quot;Confirm Path&quot; option</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>UNKNOWN</td>
+
+            <td>Used in Bob-omb Factory</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>DOES IT EVEN EXIST?</td>
+
+            <td>Description: Dice space, actually landable space with Invalid instr</td>
+        </tr>
+    </table>
+
+    <span>More Information / External Links:</span><br>
+    <a href="https://www.mariowiki.com/Mario_Party_9#Spaces">Mario Party 9 - Super Mario Wiki</a>
+</body>
+
+<script src="/iFrameResize.js"></script>
+
+</html>

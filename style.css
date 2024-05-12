@@ -1,0 +1,109 @@
+body {
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#landing_title{
+    margin: auto;
+    text-align: center;
+    padding: 10%;
+    background-color: lightblue;
+}
+
+#div_cat{
+    display:none;
+}
+#table_cat_mob{
+    width:100%;
+    border-width: 0;
+    margin:0;
+}
+#table_cat_mob tr td{
+    border-width: 5;
+    margin:auto;
+    text-align: center;
+}
+
+.cat_btn{
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+    width:75%;
+}
+
+@media only screen and (min-width: 600px){
+    #div_cat{
+        display:block;
+    }
+    #table_cat_mob{
+        display:none;
+    }
+    .cat_btn{
+        width:45%;
+    }
+}
+
+#a_cat_space{
+    background-color: #cccc00;
+}
+
+#a_cat_map{
+    background-color: green;
+}
+
+#a_cat_chars {
+    background-color: red;
+}
+
+#a_cat_minigame {
+    background-color: steelblue;
+}
+
+
+.wanted{
+    background-color: #CC9900;
+    text-align: center;
+    border-style: solid;
+}
+
+#div_latest{
+    padding:5%;
+}
+
+#div_planner{
+    background-image: linear-gradient(to right, #C2C2F0FF, #C2C2F0F0, #FFFFFFA0), url("MiniStarPlanner.png");
+    background-size: cover;
+}
+
+#div_unused {
+    background-image: linear-gradient(to left, #C2C2F0FF, #FFFFFFFF), url();
+    float:right;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.big_banner{
+    margin:auto;
+    padding-top:0.1em;
+    padding-bottom:2em;
+    padding-left: 5%;
+}
+
+.big_banner h3{
+    font-size: 2em;
+}
+
+.btn{
+    display: inline-block;
+    margin: auto;
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+    background-color: #6600FF;
+    border-radius: 0.1em;
+}
+

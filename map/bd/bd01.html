@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toad Road - Mini Star Center</title>
+    <link rel="stylesheet" href="./bd.css">
+</head>
+
+<body>
+    <div class="bd_head">
+        <h1>Toad Road</h1>
+        <h2>The Mario Party 9 introductory</h2>
+    </div>
+    <div class="bd_layout">
+        <h2>Board Layout</h2>
+        <img src="./img/bd01.png">
+    </div>
+    <h2 class="sec_space sec_head">Spaces count (all split paths)</h2>
+    <div id="div_stats">Start: 1<br>Boss Space: 1<br>Dice Space: 30<br>Backward Space: 2<br>Lucky Space: 9<br>Unlucky Space: 1<br>"Almost there" checkpoint: 1<br>Spin Space: 6<br>Ministar spot: 19<br>miniztar: 6<br>Battle Space: 5<br>Mid-Boss Spacee: 1<br>1v2/3 Space: 5<br>Bowser Jr Minigame Space: 2<br>Split path confirmation: 2<br>Blank Space (Path guiding): 8<br>Shuffle Space: 8<br>Dash Space: 6<br>4v Minigame Space: 6<br>Happening Space: 5<br>Green Space: 40<br>Captain Event Space: 1<br>Bowser Space: 1<br>Mini Ztar Space (3): 7<br>Mini Star Space (3): 9<br></div>
+    <h2 class="sec_gtip sec_head">General Tips and strategy</h2>
+    <ul>
+        <li>Do not use special dice to land on Pipe Lucky Spaces. Maximum ministars that can be gotten by landing on it is only 3. Save the special dice for other purposes.</li>
+        <li>
+            Broken bridge: Probability of succeeding:
+            <table>
+                <tr><th>No. of players</th><th>Probability</th><th>Total of dice rolls required</th></tr>
+                <tr><td>4</td><td>54.5%</td><td>16</td></tr>
+                <tr><td>3</td><td>59.7%</td><td>12</td></tr>
+                <tr><td>2</td><td>65.0%</td><td>8</td></tr>
+            </table>
+        </li>
+        <li>Overall a more luck-based board, with little strategy involved.</li>
+    </ul>
+    <h2 class="sec_ctip sec_head">Captain Event</h2>
+    <h3 class="sec_head">9 Island</h3>
+    <ul>
+        <li>Players take turn to roll a dice</li>
+        <li>Turn order decided by captain</li>
+        <li>Whoever reached the centre will get 10 ministars</li>
+        <h4>Tips and strategies</h4>
+        <li>Not really worthwhile to waste time straligising it, as the maximum a player can get is 16 ministars, which can be easily obtained on the board, especially near the end of the board.</li>
+        <li>
+            Probability of reaching the end at space:<br>
+            <img src="./bd01_cap_space_prob.png">
+        </li>
+        <li>Captain's Guide:
+            <ul>
+                <li>Put the top enemy of yours as the first to roll the die. They only have a 32.4% chance of winning it all.</li>
+                <li>Refer to the image above to determine whether it is your turn to roll the die.</li>
+            </ul>
+        </li>
+        <li style="font-weight: bold;">MATH HELP: From the start, the probability of gaining 3 ministars is 3/6, or 13/16, or 18/21, or... something else? IDK, never thought probability would get THIS hard.</li>
+    </ul>
+</body>
+
+</html>

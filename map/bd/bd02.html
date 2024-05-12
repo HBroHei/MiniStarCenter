@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bob-omb Factory</title>
+    <link rel="stylesheet" href="./bd.css">
+</head>
+
+<body>
+    <div class="bd_head">
+        <h1>Bob-omb Factory</h1>
+        <h2>(Avoid) Conveyors and Platforms</h2>
+    </div>
+    <div class="bd_layout">
+        <h2>Board Layout</h2>
+        <img src="./img/bd02_1.png">
+        <img src="./img/bd02_2.png">
+    </div>
+    <h2 class="sec_space sec_head">Spaces count (all split paths)</h2>
+    <div id="div_stats">Boss Space: 1<br>Dice Space: 33<br>Backward Space: 4<br>Lucky Space: 4<br>Unlucky Space: 2<br>"Almost there" checkpoint: 1<br>Spin Space: 6<br>ministar spot: 19<br>miniztar spot: 6<br>Mid-boss space: 1<br>Battle Space: 5<br>1v2/3 Space: 4<br>Bowser Jr Minigame Space: 4<br>Split path confirmation: 1<br>Shuffle Space: 9<br>4v Minigame Space: 8<br>Happening Space: 28<br>Green Space: 23<br>Captain Event Space: 1<br>Bowser Space: 1<br></div>
+    <h2 class="sec_gtip sec_head">General Tips and strategy</h2>
+    <ul>
+        <li>
+            First part: All backwards conveyors are bad for the captain in average, and all forwards conveyors will skip ministars, with the exception being the last 2, where the vice versa is better.<br>
+            Counting from the start to the mid-boss:
+            <ul>
+                <li>1st platform: Skips 6 ministars</li>
+                <li>2nd platform: Impossible to be landed on with the happening space on it, as the inital state of the conveyor platform is a green space. Unless a player landed on the 1st platform (which even if they did, it would be impossible to reach this space anyways), it will  be a green space when pass-by.</li>
+                <li>3rd platform: Benefits the next player after the captain's turn, with ⅚ chance of getting 3 ministars</li>
+                <li>4th platform: Skips 3 ministars, and make the next player more likely to get 5 ministars</li>
+                <li>5th platform: Skips 5 ministars</li>
+                <li>6th platform: Gain 3 ministars, but also give some chances for opponents to gain up to 8 ministars.</li>
+                <li>7th platform: Only move backs some spaces. Gives the next player another chance at the spin space though</li>
+                <li>8th platform: Gain 3 ministars, and skips 3 miniztars. It is recommended to use 1-3 / 4-6 dice to land on this happening space. (with probability of only ⅓ hitting the 3 miniztars.) Best case, you gain 3 ministars. Worst case scenario, you missed the happening space, gets 3 miniztars, but still gets to land on a spin space, upping the spin star. The other outcome is guarenteeing other player to get the 3 miniztars, causing no harm to you.</li>
+                <li>9th platform: Gain 3 ministars, but skips 5 ministars. Only use special dice to land on this if you want to guarentee you have 3 ministars / next player does not get 5 ministars. (Which is a very rare case in this stage of the game)</li>
+                <li>10th platform: Gets 3 miniztars, and move backwards. This might be the worse conveyor platform to land on.</li>
+            </ul>
+            <li>
+                Second area:
+                <ul>
+                    <li>
+                        Probability of going lower path = 49.4%<br>
+                        Probability of going upper path = 50.6%<br>
+                        Overall you will very slightly more likely going the upper path.
+                    </li>
+                    <li>Upper path: Use 4-6 / 1-10 dice if possible to gain more ministars (With the exception of bob-omb, explained below) </li>
+                    <li>Lower path: Use special dice accordingly to ensure others are getting miniztars but not you.</li>
+                    <li>
+                        Conveyor platform: Do not use special dice to land on those except last place (explained below) or the last platform.<br>
+                        The last platform can gain you 3 ministars and make the opponent have a high chance of gaining 5 miniztars.<br>
+                    </li>
+                    <li>
+                        Bob-omb on car:
+                        <ul>
+                            <li>Ideally you can make sure the bob-omb does not hit you by using special dice.</li>
+                            <li>Calculate risk management: If gain > loss, then let it explode</li>
+                            <li>Lower path have an extra bob-omb spot. Aim to get there if you are in last to try to sabotage other players.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </li>
+    </ul>
+    <h2 class="sec_ctip sec_head">Captain Event</h2>
+    <h3 class="sec_head">Side-by-Side Zone</h3>
+    <ul>
+        <li>Captain choose a slot for every players (the Captain included)</li>
+        <li>Players take turn to roll a dice, and move forward with other players</li>
+        <li>Ministars may be on the path. Event space shifts them to the left by 1 slot (Go to slot 4 if it was at slot 1)</li>
+        <h4>Tips and strategies</h4>
+        <li>
+            Average ministar gained for each slot:<br>
+            <table>
+                <tr><th>Slot</th><th>Avg Count</th></tr>
+                <tr><td>1</td><td>9.93</td></tr>
+                <tr><td>2</td><td>10.5</td></tr>
+                <tr><td>3</td><td>2.94</td></tr>
+                <tr><td>4</td><td>2.37</td></tr>
+            </table><br>
+            
+        </li>
+        <li>Captain's Guide:
+            <ul>
+                <li>Put the top enemy of yours at the 4th slot.</li>
+                <li>Put yourself at the 2nd slot to have the chance of gaining most ministars</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

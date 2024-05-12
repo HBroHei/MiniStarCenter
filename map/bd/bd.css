@@ -1,0 +1,48 @@
+.bd_head{
+    text-align: center;
+}
+
+.bd_layout{
+   background-color: #f8ffe3;
+}
+
+.sec_head{
+    padding:2%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.sec_space{
+    background-color: #fff9d6;
+}
+
+.sec_gtip{
+    background-color: #e3fffa;
+}
+
+.sec_ctip{
+    background-color: #e5ffe3;
+}
+
+body{
+    padding:0px;
+    margin:0px;
+}
+
+body div{
+    padding:2%;
+}
+
+ul{
+    padding-right: 1%;
+}
+
+table, td, th{
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+}
+
+img{
+    max-width: 100%;
+}
