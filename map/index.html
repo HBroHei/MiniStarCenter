@@ -10,13 +10,13 @@
 </head>
 
 <body>
-    <ul id="top_nav">
+    <div id="top_nav">
         <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
         <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
         <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
         <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
         <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
-    </ul>
+    </div>
     <div id="landing_title">
         <h1>
             Boards of Mario Party 9
@@ -42,21 +42,14 @@
         <a id="a_bd07" class="bd_btn" href="./bd/bd07.html">DK Jungle Ruins</a>
         <a id="a_bd00" class="bd_btn" href="./bd/bd00.html">Early Toad Road</a>
     </div>
-        <div id="bot_nav">
+    <div id="bot_nav">
         <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
         <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
         <hr style="border-color:#4e74e6">
         <div id="div_quote"></div>
     </div>
     
-    <script>
-        const msgList = [
-            'Player Conveyor is a horrible minigame now that I understand it.',
-            'Master difficulty? More like \"Cheating\" am I right?',
-            'Although I enjoyed Superstars more, I still enjoy playing Mario Party 9.'
-        ]
-        document.getElementById("div_quote").textContent = msgList[Math.floor(Math.random()*3)]
-    </script>
+<script src="https://hbrohei.github.io/MiniStarCenter/msg.js"></script>
 </body>
 
 </html>

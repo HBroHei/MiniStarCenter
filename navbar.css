@@ -1,7 +1,7 @@
 #top_nav{
     height : 10%;
     width: 100%;
-    background-color: #30478C;
+    background: linear-gradient(to right, #242873, #7e8ebd);
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;

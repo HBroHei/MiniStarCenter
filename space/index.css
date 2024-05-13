@@ -10,7 +10,8 @@ body {
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 2.5%;
-    background-color: lightblue;
+    background: linear-gradient(to bottom, #242873, #7e8ebd);
+    color:white;
 }
 
 

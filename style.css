@@ -8,11 +8,12 @@ body {
     margin: auto;
     text-align: center;
     padding: 10%;
-    background-color: lightblue;
+    background: linear-gradient(to bottom, #242873, #7e8ebd);
+    color:white;
 }
 
 #landing_title h1{
-    font-size: 9vw;
+    font-size: 3em;
 }
 
 #div_cat{
@@ -37,6 +38,8 @@ body {
     color: white;
     text-decoration: none;
     width:75%;
+    
+    border-radius: 5%;
 }
 
 @media only screen and (min-width: 600px){
@@ -53,19 +56,22 @@ body {
 }
 
 #a_cat_space{
-    background-color: #cccc00;
+    /*background: linear-gradient(to left,  #F2CB05E0, #F2CB05E0), url("./space_count.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background: #F2CB05;
 }
 
 #a_cat_map{
-    background-color: green;
+    background: #03A64A;
 }
 
 #a_cat_chars {
-    background-color: red;
+    background: #F23030;
 }
 
 #a_cat_minigame {
-    background-color: steelblue;
+    background: #05C7F2;
 }
 
 
@@ -80,13 +86,14 @@ body {
 }
 
 #div_planner{
-    background-image: linear-gradient(to right, #C2C2F0FF, #C2C2F0F0, #FFFFFFA0), url("MiniStarPlanner.png");
+    color:white;
+    background-image: linear-gradient(to right, #242873FF, #242873F0, #242873A0), url("MiniStarPlanner.png");
     background-size: cover;
 }
 
 #div_unused {
-    background-image: linear-gradient(to left, #C2C2F0FF, #FFFFFFFF), url();
-    
+    background-image: linear-gradient(to left, #242873FF, #FFFFFFFF), url();
+    color:white;
     text-align: right;
     padding-right: 5%;
 }
@@ -108,7 +115,7 @@ body {
     padding: 0.5em;
     color: white;
     text-decoration: none;
-    background-color: #6600FF;
+    background-color: #0367A6;
     border-radius: 0.1em;
 }
 
