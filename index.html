@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Mini Star Central</title>
-  
-  <!-- HTML -->
-  
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://hbrohei.github.io/MiniStarCenter/navbar.css">
 </head>
 
 <body>
+    <ul id="top_nav">
+        <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
+        <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
+        <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
+        <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
+    </ul>
+    <!--Main-->
     <div id="landing_title">
         <h1>
             Mini Star Central
@@ -59,7 +63,7 @@
             <h3>Mini Star Viewer</h3><br>
             <span>Let you to view the board space layout for Mario Party 9!</span>
             <br><br>
-            <a class="btn" href="https://hbrohei.github.io/MiniStarPlanner">Start using!</a>
+            <a class="btn" href="hbrohei.github.io/MiniStarPlanner">Start using!</a>
         </div>
     </div>
         
@@ -70,8 +74,22 @@
             <br><br>
             <a class="btn" href="./Unused/">Explore</a>
         </div>
+    </div>
+    <div id="bot_nav">
+        <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
+        <hr style="border-color:#4e74e6">
+        <div id="div_quote"></div>
+    </div>
     
     <!-- Project -->
-    <script src="main.js"></script>
+    <script>
+        const msgList = [
+            'Player Conveyor is a horrible minigame now that I understand it.',
+            'Master difficulty? More like \"Cheating\" am I right?',
+            'Although I enjoyed Superstars more, I still enjoy playing Mario Party 9.'
+        ]
+        document.getElementById("div_quote").textContent = msgList[Math.floor(Math.random()*3)]
+    </script>
 </body>
 </html>

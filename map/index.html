@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://hbrohei.github.io/MiniStarCenter/navbar.css">
 </head>
 
 <body>
+    <ul id="top_nav">
+        <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
+        <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
+        <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
+        <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
+    </ul>
     <div id="landing_title">
         <h1>
             Boards of Mario Party 9
@@ -25,15 +33,30 @@
     </div>
     <h1>Vanilla Game Boards</h1>
     <div id="van_bd_list_div">
-        <a id="a_bd01" class="bd_btn" href="./bd/bd01.html"><button>Toad Road</button></a>
-        <a id="a_bd02" class="bd_btn" href="./bd/bd02.html"><button>Bob-omb Factory</button></a>
-        <a id="a_bd03" class="bd_btn" href="./bd/bd03.html"><button>Boo's Horror Mansion</button></a>
-        <a id="a_bd04" class="bd_btn" href="./bd/bd04.html"><button>Blooper Beach</button></a>
-        <a id="a_bd05" class="bd_btn" href="./bd/bd05.html"><button>Magma Mines</button></a>
-        <a id="a_bd06" class="bd_btn" href="./bd/bd06.html"><button>Bowser Station</button></a>
-        <a id="a_bd07" class="bd_btn" href="./bd/bd07.html"><button>DK Jungle Ruins</button></a>
-        <a id="a_bd00" class="bd_btn" href="./bd/bd00.html"><button>Early Toad Road</button></a>
+        <a id="a_bd01" class="bd_btn" href="./bd/bd01.html">Toad Road</a>
+        <a id="a_bd02" class="bd_btn" href="./bd/bd02.html">Bob-omb Factory</a>
+        <a id="a_bd03" class="bd_btn" href="./bd/bd03.html">Boo's Horror Mansion</a>
+        <a id="a_bd04" class="bd_btn" href="./bd/bd04.html">Blooper Beach</a>
+        <a id="a_bd05" class="bd_btn" href="./bd/bd05.html">Magma Mines</a>
+        <a id="a_bd06" class="bd_btn" href="./bd/bd06.html">Bowser Station</a>
+        <a id="a_bd07" class="bd_btn" href="./bd/bd07.html">DK Jungle Ruins</a>
+        <a id="a_bd00" class="bd_btn" href="./bd/bd00.html">Early Toad Road</a>
     </div>
+        <div id="bot_nav">
+        <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
+        <hr style="border-color:#4e74e6">
+        <div id="div_quote"></div>
+    </div>
+    
+    <script>
+        const msgList = [
+            'Player Conveyor is a horrible minigame now that I understand it.',
+            'Master difficulty? More like \"Cheating\" am I right?',
+            'Although I enjoyed Superstars more, I still enjoy playing Mario Party 9.'
+        ]
+        document.getElementById("div_quote").textContent = msgList[Math.floor(Math.random()*3)]
+    </script>
 </body>
 
 </html>

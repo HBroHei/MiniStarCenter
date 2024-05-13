@@ -2,7 +2,10 @@
     text-align: center;
 }
 
-.bd_layout{
+#bd01_layout{
+   background-color: #f8ffe3;
+}
+#bd02_layout{
    background-color: #f8ffe3;
 }
 
@@ -27,6 +30,7 @@
 body{
     padding:0px;
     margin:0px;
+    font-family: sans-serif;
 }
 
 body div{

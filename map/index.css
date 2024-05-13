@@ -96,13 +96,21 @@ table, td, th{
 }
 .bd_btn{
     margin:3%;
+    padding-top:3%;
+    padding-bottom:3%;
     width:90%;
-}
-.bd_btn button{
-    padding:5%;
-    width:90%;
+    text-decoration: none;
+    border-color: black;
+    border-width: 10%;
+    border-style: solid;
+    border-radius: 15%;
 }
 
-#a_bd01 button{
+#a_bd01{
+    background: #dfff80;
+    color:black;
+}
+#a_bd02{
     background: #00FF00;
+    color:black;
 }
