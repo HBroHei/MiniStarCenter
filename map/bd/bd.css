@@ -16,15 +16,24 @@
 }
 
 .sec_space{
-    background-color: #fff9d6;
+    background: linear-gradient(to right,#fff9d6ff,#fff9d6ff, #fff9d67f), url("../../space_count.jpg");
+    background-position: 95% 50%;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .sec_gtip{
-    background-color: #e3fffa;
+    background: linear-gradient(to right, #e3fffaff,#e3fffaff,#e3fffa7f), url("../../guides.png");
+    background-position: 95% 50%;
+    background-size:contain;
+    background-repeat: no-repeat;
 }
 
 .sec_ctip{
-    background-color: #e5ffe3;
+    background: linear-gradient(to right, #e5ffe3ff,#e5ffe3ff,#e5ffe37f), url("../../sign_cpn.png");
+    background-position: 95% 50%;
+    background-size:contain;
+    background-repeat: no-repeat;
 }
 
 body{
@@ -48,5 +57,5 @@ table, td, th{
 }
 
 img{
-    max-width: 100%;
+    max-width: 95%;
 }
