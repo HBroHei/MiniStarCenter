@@ -5,15 +5,19 @@ body{
 }
 
 #main_div{
-    padding:3%;
+    padding:0%;
 }
 
-#landing_title{
+#landing_title {
     margin: auto;
     text-align: left;
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 2.5%;
     background: linear-gradient(to bottom, #242873, #7e8ebd);
-    color:white;
+    color: white;
+}
+
+.mg_guide_h2{
+    padding:0.5em;
 }

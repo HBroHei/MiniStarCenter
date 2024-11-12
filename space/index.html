@@ -84,7 +84,7 @@
         </tr>
         <tr>
             <td>9</td>
-            <td>1 ministar</td>
+            <td>1 mini star</td>
             <td>UNCONFIRMED</td>
 
         </tr>
@@ -249,8 +249,8 @@
         </tr>
         <tr>
             <td>36</td>
-            <td>Blank Space (No Texture)</td>
-            <td>TODO but is it really blank space only?</td>
+            <td>Early Jackpot Space?</td>
+            <td>Activate the Jackpot Machine thrn close immediately after it. NEEDS MORE TESTING</td>
         </tr>
         <tr>
             <td>37</td>
@@ -261,13 +261,13 @@
         <tr>
             <td>38</td>
             <td>Mini Ztar Space (1)</td>
-            <td>Gives out players 1 miniztar (Makes the player lose 1 ministar)</td>
+            <td>Gives out players 1 mini ztar (Makes the player lose 1 mini star)</td>
             <td>- Only used in Toad Road</td>
         </tr>
         <tr>
             <td>39</td>
             <td>Mini Star Space (1)</td>
-            <td>Gives out player 1 ministar</td>
+            <td>Gives out player 1 mini star</td>
             <td>-Only used in Toad Road, different than the one used in the pipe bonus area</td>
         </tr>
         <tr>
@@ -316,10 +316,255 @@
         </tr>
     </table>
 
+    <hr>
+
+    <h2>Event jumper parameters IDs:</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Event</th>
+            <th>Brief Description</th>
+            <th>Technical Detail</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>+1 Ministar (Lucky area)</td>
+            <td>A dialog will pop up.</td>
+            <td>Unknown if values are adjustable</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>-1 Ministar</td>
+            <td>A dialog will pop up, notifying the player that they lose 1 ministar.</td>
+            <td>Unknown if values are adjustable</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Go backwards</td>
+            <td>Make the player roll a dice to go backwards on the board</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Dice Space</td>
+            <td>Gives out a random special dice, and may trigger a minigame or gives out some ministars</td>
+            <td>See description of Dice Space above</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>1vs2 / 1vs3 Minigame</td>
+            <td>Makes players to play a 1VS3 (2 if 3 players only) minigame. The captain would be in the team of one.</td>
+
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Bowser Jr Minigame</td>
+            <td>Makes 2 players to play a Bowser Jr minigame</td>
+            <td>See Bowser Jr space description above</td>
+        </tr>
+        <tr>
+            </th>
+            <td>6</td>
+            <td>4 Player Minigame</td>
+            <td>Makes players to play a Free-for-all minigame</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Spin Roulette</td>
+            <td>See Spin spaces description above</td>
+            <td>Unknown if this or 21 is used in-game</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Split path confirmation</td>
+            <td>See split path confirmation description above</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Minigame result (Add ministar to UI)</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Nothing?</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Turn order shuffle</td>
+            <td>See Shuffle space description above</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>+1 ministar</td>
+            <td>Add 1 ministar, and triggers a Guide Toad dialog</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>-1 ministar</td>
+            <td>Deduct 1 ministar, and triggerz a Guide Toad dialog</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Go again</td>
+            <td>See "Dash space" description above</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>"Almost there" event</td>
+            <td>See "Almost there" checkpoint section above</td>
+            <td>Unknown if this or 17 is used in-game.</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>"Almost there" event without Bowser</td>
+            <td>Same as 15 / 17, but the "Bowser's gift" section will not be triggered. Players proceed as usual after last place receives the slow dice block</td>
+            <td>Unused</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>"Almost there" event</td>
+            <td>See "Almost there" checkpoint section above</td>
+            <td>Unknown if this or 15 is used in-game.</td>
+
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Start of the turn</td>
+            <td></td>
+            <td>Triggers at the start of the turn.</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Nothing?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Ministars get on path / MG prep?</td>
+            <td>Unsure - need more testing</td>
+
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Spin Roulette</td>
+            <td>Unknown if 7 or this is used in-game</td>
+
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Lucky</td>
+            <td>See Lucky space description above.</td>
+
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Unlucky</td>
+            <td>See Unlucky space description above.</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Bowser</td>
+
+            <td>See Bowser space description above.</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Battle Minigame</td>
+            <td>See Battle space description above.</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Ministar space
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Ministar space</td>
+            <td></td>
+            <td>(Toad Road only?)</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Unused (Early?) "Almost there" event</td>
+            <td>This event is better explained in video form. <a href="https://youtu.be/Qf-dPUnY4aY">YouTube Link</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Bowser event ending</td>
+            <td>Goes to the Bowser spce scene, with no players. After a few dialogs, return to the board</td>
+            <td>May be the ending scene for Bowser space minigames</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Bowser Jr. Minigame ending</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>Battle minigame ending</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Mid-boss Minigame</td>
+            <td>See Mid-boss space description above</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>Mid-boss defeated (part 1)</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>Mid-boss defeated (part 2)</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>
+                End-boss Minigame
+            </td>
+            <td>See Boss space description above</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>End-boss defeated</td>
+            <td>Plays the cutscene of defeating the final boss of the board, then go to the result screen</td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>Board intro - transition to player</td>
+            <td>Used in the transition from the board overview to the players</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>Board Intro</td>
+            <td>Triggered when the board overview cutscene is played</td>
+            <td></td>
+        </tr>
+    </table>
+
     <span>More Information / External Links:</span><br>
     <a href="https://www.mariowiki.com/Mario_Party_9#Spaces">Mario Party 9 - Super Mario Wiki</a>
     
-        <div id="bot_nav">
+    <div id="bot_nav">
         <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
         <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
         <hr style="border-color:#4e74e6">

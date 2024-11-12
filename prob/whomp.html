@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://hbrohei.github.io/MiniStarCenter/navbar.css">
+    <style>
+        body{
+            padding:0;
+            margin:0;
+        }
+        #landing_title{
+            margin: auto;
+            text-align: left;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-left: 2.5%;
+            background: linear-gradient(to bottom, #242873, #7e8ebd);
+            color:white;
+        }
+        #main_div{
+            padding:1%;
+        }
+        label{
+            font-size: 1.25em;
+            font-weight : bold;
+        }
+        .danger{
+            color:red;
+            font-weight: bold;
+        }
+        table, tr, th, td{
+            border-collapse: collapse;
+            border-color: black;
+            border-style: solid;
+            border-radius: 1px;
+            
+            padding:1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top_nav">
+        <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
+        <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
+        <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
+        <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
+    </div>
+    <div id="landing_title">
+        <h1>
+            Whomp Stomp Scenario Table
+        </h1>
+        <h3>
+            Mini Star Central
+        </h3>
+    </div>
+    <div id="main_div">
+        <noscript>
+            <h2>Warning</h2>
+            <p>
+                It looks like JavaScript isn’t enabled on this browser. Please enable it to make this function.
+            </p>
+        </noscript>
+        <label for="sel_noplayer">No. of players</label><br>
+        <select id="sel_noplayer">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select><br><br>
+        
+        <label for="inp_initval">Inital value</label><br>
+        <input id="inp_initval" type="number" max="7" value="0"><br>
+        <button onclick="calc()">Show</button>
+        <hr>
+        <div id="div_res">
+            <table id="tab_res">
+                <tr>
+                    <th>Inital Position</th>
+                    <th>Result Position</th>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        But really, it all comes down to mind games, so this table would only heps a little.
+    </div>
+
+    <div id="bot_nav">
+        <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
+        <hr style="border-color:#4e74e6">
+        <div id="div_quote"></div>
+    </div>
+</body>
+<script src="../msg.js"></script>
+<script>
+    function numConvert(noplayer, pos){
+        switch(noplayer){
+            case 2:
+                return pos==0 ? "<span class='danger'>In front of the Whomp</span>" : "Opposite of the Whomp";
+            case 3:
+                return ["<span class='danger'>In front of the Whomp</span>", "Left of the Whomp", "Right of the Whomp"][pos];
+            case 4:
+                return ["<span class='danger'>In front of the Whomp</span>", "Left of the Whomp", "Opposite of the Whomp", "Right of the Whomp"][pos];
+        }
+        return pos
+    }
+    
+    function calc(){
+        const noplayer = Number(document.getElementById("sel_noplayer").value);
+        const initval = Number(document.getElementById("inp_initval").value);
+        document.getElementById("tab_res").innerHTML = "<tr><th>Inital Position</th><th>Result Position</th></tr>";
+        for(let i=0; i<=noplayer; i++){
+            let trow_title = document.createElement("tr")
+            trow_title.textContent = "Final value: " + (initval+i);
+            document.getElementById("tab_res").appendChild(trow_title);
+            for(let j=0; j<noplayer; j++){
+                let trow = document.createElement("tr");
+                let tcell_init = document.createElement("td");
+                tcell_init.innerHTML = numConvert(noplayer,j);
+                trow.appendChild(tcell_init);
+                let tcell_after = document.createElement("td");
+                tcell_after.innerHTML = numConvert(noplayer,(j+initval+i)%noplayer);
+                trow.appendChild(tcell_after);
+                document.getElementById("tab_res").appendChild(trow);
+            }
+        }
+    }
+</script>
+</html>

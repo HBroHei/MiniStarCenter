@@ -104,7 +104,7 @@ table, td, th{
     border-color: black;
     border-width: 10%;
     border-style: solid;
-    border-radius: 15%;
+    border-radius: 0.5em;
 }
 
 #a_bd01{
