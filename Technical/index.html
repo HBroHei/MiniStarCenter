@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technical Stuff - Mini Star Center</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://hbrohei.github.io/MiniStarCenter/navbar.css">
+</head>
+
+<body>
+    <div id="top_nav">
+        <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
+        <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
+        <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
+        <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
+    </div>
+    <div id="landing_title">
+        <h1>
+            Technical stuff
+        </h1>
+        <h3>
+            Mini Star Central
+        </h3>
+    </div>
+    <div id="main_div">
+        <p>
+            This page will serve as a documentation of my finding in the technical details of Mario Party 9.
+        </p>
+        <h3>Seperate pages</h3>
+        <ul class="btn_list">
+            <li><a href="./game_ids.html" class="btn">List of in-game IDs</a></li>
+            <li><a href="../Unused/" class="btn">Unused contents</a></li>
+        </ul>
+        <h3>Table of content</h3>
+        <ol>
+            <li><a href="#4turnsmg">4 Turns Forced Minigame</a></li>
+            <li><a href="#roulettepre">The Rigged Roulette</a></li>
+        </ol>
+        <h2 id="4turnsmg">4 Turns Forced Minigame</h2>
+        <p>
+            Have you landed on a Special Dice Space while in a minigame drystreak, and after the special dice, it will pop a minigame for you to play? Does it feels like it is always like that? Turns out you are not crazy!
+        </p>
+        <p>
+            The game stores the current turn number and last minigame turn number. After the Dice Block gift box is opened, it checks whether (current turn number - last minigame turn) is greater than 4. If it is, a minigame will be triggered. I guess this is to mimic the old Mario Party where there is a minigame after all 4 players took their turn.
+        </p>
+        <h2 id="roulettepre">The Rigged Roulette</h2>
+        <p>
+            The result of Spin Spaces and Bowser Spaces roulette is predetermined. That is, no matter when you press the A butyon, it will always select the same event. 
+        </p>
+    </div>
+    <div id="bot_nav">
+        <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
+        <hr style="border-color:#4e74e6">
+        <div id="div_quote"></div>
+    </div>
+    <script src="https://hbrohei.github.io/MiniStarCenter/msg.js"></script>
+</body>
+
+</html>

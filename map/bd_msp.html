@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MP9 Board Visualisation - Mini Star Center</title>
+    <link rel="stylesheet" href="bd_edit.css">
+    <link rel="stylesheet" href="https://hbrohei.github.io/MiniStarCenter/navbar.css">
+</head>
+
+<body>
+    <div id="top_nav">
+        <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
+        <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
+        <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
+        <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
+    </div>
+    <div id="landing_title">
+        <h1>
+            View Boards via Mini Star Viewer
+        </h1>
+        <h3>
+            Mini Star Central
+        </h3>
+    </div>
+    <div id="main_div">
+        <h1>Mini Star Viewer</h1>
+        <p>
+            A tool that I created to view the board layout in a more convenient way. <b>The tool currently does not support editing the board</b>
+        </p>
+        <ul>
+            Table of Content
+            <li><a href="#0">Tools / Software & Files needed</a></li>
+            <li><a href="#fs_desc">Understanding the filesystem</a></li>
+            <li><a href="#1">Extract the files</a></li>
+            <li><a href="#2">Open the file and export to JSON</a></li>
+            <li><a href="#3">Import to viewer</a></li>
+        </ul>
+        <h2 id="0">Tools / Software & Files needed</h2>
+        <p>
+            <ul>
+                <li><a href="https://github.com/libertyernie/brawltools">BrawlCrate</a><br>
+                    Required for using plugins.
+                </li>
+                <li><a href="https://dolphin-emu.org">Dolphin Emulator</a>
+                    or other ISO file extracting tools.
+                </li>
+                <li>A ROM of Mario Party 9 (Use a legitimate version, downloading free ROMs are strongly discouraged and may be illegal.)</li>
+            </ul>
+        </p>
+        <h2>Prerequisite: Install the plugin</h2>
+        <p>
+            A plugin is required to use the viewer.
+            <ol>
+                <li>Download the repository at <a href="https://github.com/HBroHei/MiniStarPlanner">GitHub</a></li>
+                <li>Move the folder `MP9BoardExporter` from the downloaded folder to BrawlCrate's plugin folder (In BrawlCrate > Tools > Open API Folder > Plugins)</li>
+                <li>Reload BrawlCrate plugins (Tools > Reload Plugins)</li>
+            </ol>
+        </p>
+        <h2 id="fs_desc">Knowing the file system</h2>
+        <p>
+            The files you are looking for are usually called "mass.brres.lz". They are usually located in "DATA/files/common/bd0*", where * = 0,1,2,3,4,5,6 or 7.<br>
+            <table>
+                <tr><th>Number</th><th>Board</th></tr>
+                <tr><td>bd00</td><td>Early Toad Road</td></tr>
+                <tr><td>bd01</td><td>Toad Road</td></tr>
+                <tr><td>bd02</td><td>Bob-omb Factory</td></tr>
+                <tr><td>bd03</td><td>Boo's Horror Castle</td></tr>
+                <tr><td>bd04</td><td>Blooper Beach</td></tr>
+                <tr><td>bd05</td><td>Magma Mines</td></tr>
+                <tr><td>bd06</td><td>Bowser Station</td></tr>
+                <tr><td>bd07</td><td>DK's Jungle Ruins</td></tr>
+            </table>
+        </p>
+        <h2 id="1">1. Extract the files</h2>
+        <p>
+            Extract the content of the ISO first.<br>
+            For Dolphin Emulator,
+            <ol>
+                <li>If Mario Party 9 is not on the main screen, go to Option -> Configuration -> Paths -> Add. Select the path containing the Mario Party 9 ISO.</li>
+                <img src="dol1.png">
+                <li>Right Click the Mario Party 9 logo -> Properties -> Filesystem
+                    <br>If the Filesystem tab button is not showing, click the arrow button.
+                </li>
+                <li>Navigate to the respective board folder (refer to above), and right click "mass.brres.lz" -> Extract file</li>
+                <li>Choose a location. This will be where your extracted "mass.brres.lz" stores. (It is recommended to store these files in a seperate, new folder.)</li>
+            </ol>
+        </p>
+        <h2 id="2">2. Open the relavent model</h2>
+        <p>
+            <ol>
+                <li>Open the "mass.brres.lz" file that has just been extracted with BrawlCrate</li>
+                <li>Double click the "3DModel (NW4R)" Folder. You will see different "mdl0" files.</li>
+                Each file represents different paths.<br>
+                e.g. In Toad Road, mass01 is the main path, mass04 is the bonus area, and mass05 is the Captain Event path.
+                <li>
+                    Select the root node (the item labeled BRRES) and select Plugin > MP9BoardExporter > export_board. Choose the folder that the JSON file will be exported to.
+                    <ul><li>Alternatively, select the individual mdl0 nodes to export only that mdl0 path.</li></ul>
+                </li>
+            </ol>
+            <h2 id="3">3. Import JSON and visualise the board</h2>
+            <ol>
+                <li>Open <a href="https://hbrohei.github.io/MiniStarPlanner">Mini Star Viewer</a></li>
+                <li>Click "Load JSON File", and select the JSON file that was just exported. Wait a few moment for the board to show</li>
+            </ol>
+        </p>
+    </div>
+    <div id="bot_nav">
+        <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
+        <hr style="border-color:#4e74e6">
+        <div id="div_quote"></div>
+    </div>
+    <script src="https://hbrohei.github.io/MiniStarCenter/msg.js"></script>
+</body>
+
+</html>

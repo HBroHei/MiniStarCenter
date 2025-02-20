@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boo's Horror Castle</title>
+    <link rel="stylesheet" href="./bd.css">
+    <link rel="stylesheet" href="https://hbrohei.github.io/MiniStarCenter/navbar.css">
+</head>
+
+<body>
+    <ul id="top_nav">
+        <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
+        <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
+        <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
+        <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
+    </ul>
+    <div class="bd_head">
+        <h1>Boo's Horror Castle</h1>
+        <h2>Boo-be-trappin'</h2>
+    </div>
+    <div id="bd03_layout">
+        <h2>Board Layout</h2>
+        Lower floor:<br>
+        <img src="./img/bd03_lower.png"><br>
+        Upper Floor:<br>
+        <img src="./img/bd03_upper.png"><br>
+    </div>
+    <h2 class="sec_space sec_head">Spaces count (all split paths)</h2>
+    <div id="div_stats">Start: 1<br>Boss Space: 1<br>Dice Space: 44<br>Backward Space: 5<br>Lucky Space: 5<br>"Almost there" checkpoint: 2<br>Spin Space: 10<br>ministars spot: 13<br>miniztars spot: 3<br>Battle Space: 4<br>Mid-Boss Space: 1<br>1v2/3 Space: 3<br>Bowser Jr Minigame Space: 3<br>Split path confirmation: 4<br>Blank Space (Path guiding): 40<br>Shuffle Space: 10<br>Dash Space: 7<br>4v Minigame Space: 5<br>Happening Space: 6<br>Green Space: 12<br>Captain Event Space: 1<br></div>
+    <h2 class="sec_gtip sec_head">General Tips and strategy</h2>
+    <ul>
+        <li>The board's gimmik is the Boo portraits that spawns Boo. Every turn the Boo would move 3 spaces, and if the Boo catches up with the captain (or if the captain catches up with the Boo), the captain loses half of their ministars.</li>
+        <li>There are light rooms aling the path that a Boo cannot get to. It is, however, slower than taking the main path.</li>
+        <li>This creates strategies to screw other players over.</li>
+        <li>Happening spaces inside / outside light rooms will wrap you inside / outside the room, depending on where you are.</li>
+        <li>When the vehicle goes outside the main castle, the Boo will be trapped inside and does not chase the players mow.</li>
+        <li>However, if the vehicle is too slow that the Boo goes outside first, they will not be trapped inside the castle and will continue move 3 spaces every turn outside. Captains taht catches up with them will still loses half of their ministars.</li>
+        <li>Generally, you want to create "Boo sandwiches" (a Boo in front of the car, and a Boo at the back of the car). The probability of players getting caught by a Boo is higher by having Boo sandwiches. (Be wary that you might get caught by Boo in this situation, too.)</li>
+        <li>
+            Boo trapping strategies:
+            <ul>
+                <li>1st and 2nd Boo portrait: Not worth spending too much time strategising here as players will most likely have few ministars to lose. (which can be easily gain back)</li>
+                <li>
+                    3rd Boo: Not really a threat as you are about to go outside. The only thing that needs to be worried is the back space. (Even then, it is a ⅙ chance for regular dice roll, and you can avoid it with a 4-5-6 dice block)<br>
+                    Also not really worth spending time with it as it is still early game.
+                </li>
+                <li>
+                    4th Boo: By spending time in the light room after the portrait, the Boo will be very close to the vehicle. Enter the light room if you land on the 2 minigame spaces to increase the chance that other players gets the Boo.
+                </li>
+                <li>
+                    5th Boo: Same as the 4th Boo, enter the light room to increase the chance others getting caught by Boo, UNLESS you wanted to get the 6th Boo (See below)
+                </li>
+                <li>
+                    6th Boo: Can be skipped by going into the light room. DO NOT enter the light room if the 4th Boo is still on the board to sandwich other players between these Boos, or that you will be landing on the happening space (which will teleport all players into the light room with the Boo still being activated, making a potential Boo sandwich.
+                </li>
+                <li>
+                    7th and 8th Boo: The game automatically set up a Boo sandwich for all players with these 2 Boos. Beware of the backward spaces that may send you right into one of the Boo.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h2 class="sec_ctip sec_head">Captain Event</h2>
+    <h3 class="sec_head">Scardy Rat Race</h3>
+    <ul>
+        <li>Each players pay an entrance fee of 2 ministars to the scardy rat</li>
+        <li>The Players take turn to roll a dice, and move forward with other players, while the Scardy Rat also rolls before each player's turn ends</li>
+        <li>The Scardy Rat will only use 1-2-3 Dice block, while the players only use normal dice block.</li>
+        <li>The player that catched up with the rat gets all of the entrance fee.</li>
+        <h4>Tips and strategies</h4>
+        <li>
+            Board simulator:<br>
+            <noscript>Unavailable. Please use a browser with JavaScript enabled.</noscript>
+            <label fpr="inp_p">Player's position: </label>
+            <input id="inp_p" size="2" value="0" type="number"><br>
+            <label for="inp_r">Scardy rat's position: </label>
+            <input id="inp_r" size="2" value="5" type="number"><br>
+            <button id="btn_cal" onclick="sim()">Run</button>
+            <div id="div_res"></div>
+            Note: Value may vary slightly on each runs.
+            
+        </li>
+        <li>Captain's Guide:
+            <ul>
+                <li>Don't use the simulator above when playing with your friends if you value playing it fair (and your friendship, but you would put friendship aside when playing Mario Party anyways)</li>
+                <li>Instead, be good at calculating probability, I guess. There are too many possible combinations to list here. <del>(I also sucked at math)</del></li>
+            </ul>
+        </li>
+    </ul>
+    
+        <div id="bot_nav">
+        <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
+        <hr style="border-color:#4e74e6">
+        <div id="div_quote"></div>
+    </div>
+    
+    <script>
+        const msgList = [
+            'Player Conveyor is a horrible minigame now that I understand it.',
+            'Master difficulty? More like \"Cheating\" am I right?',
+            'Although I enjoyed Superstars more, I still enjoy playing Mario Party 9.'
+        ];
+        document.getElementById("div_quote").textContent = msgList[Math.floor(Math.random()*3)];
+        
+        var w;
+        
+        function sim(){
+            if(typeof(Worker)!=="undefined"){
+                // Check if worker already defined
+                if(typeof(w)=="undefined"){
+                    w = new Worker("bd03.js");
+                }
+                document.getElementById("div_res").textContent = "Loading...";
+                w.onmessage = evt => {
+                    document.getElementById("div_res").textContent = evt.data;
+                }
+                w.postMessage(
+                    [Number(document.getElementById("inp_r").value),
+                    Number(document.getElementById("inp_p").value)]
+                );
+                w.onerror = evt => {
+                    console.log(evt.message, evt);
+                }
+            }
+            else{
+                console.log("Worker not working");
+                document.getElementById("div_res").textContent = simulate(Number(document.getElementById("inp_r").value),
+                    Number(document.getElementById("inp_p").value));
+            }
+        }
+        
+        
+        function simulate(initRatPos, initPlayerPos) {
+            const spaces = [-1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0];
+            let pwinCount = 0;
+            
+            if(initPlayerPos>=initRatPos || initPlayerPos>=spaces.length || initRatPos>=spaces.length){
+                return "Please enter a valid position";
+            }
+        
+            for (let i = 0; i < 100000; i++) {
+                let ratPos = initRatPos;
+                let playerPos = initPlayerPos;
+        
+                // Rat start
+                ratPos += Math.floor(Math.random() * 3) + 1;
+                if(ratPos >= spaces.length) continue; // Rat wins
+        
+                while(spaces[ratPos] === 1) {
+                    ratPos += Math.floor(Math.random() * 3) + 1;
+                }
+        
+                playerPos += Math.floor(Math.random() * 6) + 1;
+                if(playerPos >= spaces.length) continue; // Rat wins
+                while (spaces[playerPos] === 1) {
+                    playerPos += Math.floor(Math.random() * 6) + 1;
+                }
+                console.log(playerPos);
+                if (playerPos >= ratPos) {
+                    pwinCount++;
+                }
+            }
+        
+            return (`Catching chance: ${(pwinCount / 100000 * 100).toFixed(2)}%`);
+        }
+    </script>
+</body>
+
+</html>

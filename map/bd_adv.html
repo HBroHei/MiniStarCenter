@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Direct MP9 Board Editing - Mini Star Center</title>
+    <link rel="stylesheet" href="bd_edit.css">
+    <link rel="stylesheet" href="https://hbrohei.github.io/MiniStarCenter/navbar.css">
+</head>
+
+<body>
+    <div id="top_nav">
+        <a href="https://hbrohei.github.io"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter" id="main_menu_btn" class="top_nav_btn">Mini Star Center</a>
+        <a href="https://hbrohei.github.io/space/" class="top_nav_btn hidden_narrow">Spaces</a>
+        <a href="https://hbrohei.github.io/map/" class="top_nav_btn hidden_narrow">Maps</a>
+        <a href="https://hbrohei.github.io/minigame/" class="top_nav_btn hidden_narrow">Minigames</a>
+    </div>
+    <div id="landing_title">
+        <h1>
+            Make Custom Boards via Direct Editing
+        </h1>
+        <h3>
+            Mini Star Central
+        </h3>
+    </div>
+    <div id="main_div">
+        <h1>Edit board spaces</h1>
+        <p>
+            I was <a href="https://youtube.com/playlist?list=PLWkdF_5xd4OcwJXTcq9xiHCcXZFt5MFob">finding unused content</a> in Mario Party 9.<br>
+            So naturally, I would discover the file which contains the Spaces. <br>
+            And as it turns out, it was pretty straightforward for editing the board spaces. <br>
+        </p>
+        <ul>
+            Table of Content
+            <li><a href="#0">Tools / Software & Files needed</a></li>
+            <li><a href="#fs_desc">Understanding the filesystem</a></li>
+            <li><a href="#1">Extract the Files</a></li>
+            <li><a href="#2">Open the relavent model</a></li>
+            <li><a href="#3">Edit space position</a></li>
+        </ul>
+        <h2 id="0">Tools / Software & Files needed</h2>
+        <p>
+            <ul>
+                <li><a href="https://github.com/libertyernie/brawltools">BrawlBox</a> or other BRRES editor<br>
+                    I will use <a href="https://github.com/soopercool101/BrawlCrate">BrawlCrate</a> here, which is a fork of BrawlBox, with updates and patches.<br>
+                    However, I will not provide tutortals on editing with other BRRES editor as there are a number of those, and some will not work for editing.
+                </li>
+                <li><a href="https://dolphin-emu.org">Dolphin Emulator</a>
+                    or other ISO file extracting tools.
+                </li>
+                <li>A ROM of Mario Party 9 (Use a legitimate version, downloading free ROMs are strongly discouraged and may be illegal.)</li>
+            </ul>
+        </p>
+        <h2 id="fs_desc">Knowing the file system</h2>
+        <p>
+            The files you are looking for are usually called "mass.brres.lz". They are usually located in "DATA/files/common/bd0*", where * = 0,1,2,3,4,5,6 or 7.<br>
+            <table>
+                <tr><th>Number</th><th>Board</th></tr>
+                <tr><td>bd00</td><td>Early Toad Road</td></tr>
+                <tr><td>bd01</td><td>Toad Road</td></tr>
+                <tr><td>bd02</td><td>Bob-omb Factory</td></tr>
+                <tr><td>bd03</td><td>Boo's Horror Castle</td></tr>
+                <tr><td>bd04</td><td>Blooper Beach</td></tr>
+                <tr><td>bd05</td><td>Magma Mines</td></tr>
+                <tr><td>bd06</td><td>Bowser Station</td></tr>
+                <tr><td>bd07</td><td>DK's Jungle Ruins</td></tr>
+            </table>
+        </p>
+        <h2 id="1">1. Extract the files</h2>
+        <p>
+            Extract the content of the ISO first.<br>
+            For Dolphin Emulator,
+            <ol>
+                <li>If Mario Party 9 is not on the main screen, go to Option -> Configuration -> Paths -> Add. Select the path containing the Mario Party 9 ISO.</li>
+                <li>Right Click the Mario Party 9 logo -> Properties -> Filesystem
+                    <br>If the Filesystem tab button is not showing, click the arrow button.
+                </li>
+                <li>Navigate to the respective board folder (refer to above), and right click "mass.brres.lz" -> Extract file</li>
+                <li>Choose a location. This will be where your extracted "mass.brres.lz" stores. (It is recommended to store these files in a seperate, new folder.)</li>
+            </ol>
+        </p>
+        <h2 id="2">2. Open the relavent model</h2>
+        <p>
+            <ol>
+                <li>Open the "mass.brres.lz" file that has just been extracted with BrawlCrate</li>
+                <li>Double click the "3DModel (NW4R)" Folder</li>
+                Each file represents different paths.<br>
+                e.g. In Toad Road, mass01 is the main path, mass04 is the bonus area, and mass05 is the Captain Event path.<br>
+                For our editing convenience, we will open up a map so that we can refer to its position and ID netween the map and the property editor.
+                <li>
+                    Right click the path that will be edited -> Preview <br>
+                    If you found out this is not the path you want to edit, close this window and try the other file instead.
+                </li>
+                Note: For convinence set the Viewport Projection to top<br>
+                (View -> Viewport -> Projection -> Top)
+                <li>
+                    Click the "<" button on the right to expand and show the bone ID list.
+                </li>
+            </ol>
+            <h2 id="3">3. Edit space position</h2>
+            <ol>
+                <li>
+                    Select one of the item in the list. <br>
+                    This is the space that will be moved.<br>
+                </li>
+                If it showed up as a sphere, press "T" to change to "transform" mode
+                <li>
+                    Drag the space around to the desired location.
+                </li>
+                For situation where dragging won't work or Y position needed to be changed,<br>
+                Click the button at the bottom. At the "Transform" Row is where X, Y and Z position are stored.<br>
+                Edit those value for the desired position.
+            </ol>
+        </p>
+        <h2 id="4">4. Change the space type</h2>
+        <p>
+            <ol>
+                <li>
+                    Double click the path that will be edited -> Bones -> m000_all (Or similar names) <br>
+                    If this is not the path you want to edit, just close the window and open the other file.
+                </li>
+                <li>
+                    Here, Spaces are represented by unique IDs.<br>
+                    Select the space to be edited.<br>
+                    (For the space id, refer to the model preview menu, and select the corresponding item / space)
+                </li>
+                <li>
+                    In the menu at the right, locate the UserEntries column.<br>
+                    Expand the column, expand the "ms_type:xx" column, and expand the "Entries" Column
+                    <ul>
+                        <li>xx may vary on spaces. This is the value to be editted. It represents the type of the space (e.g. Dice space, Green space, etc)</li>
+                        <li>To expand, Click on the arrow to expand</li>
+                    </ul>
+
+                </li>
+                <li>
+                    At the [0] row, edit the value next to it, which should be the xx value initally.<br>
+                    <a href="../space/">Here</a> are all the values that it can be<br>
+                </li>
+            </ol>
+                <h4>
+                    Repeat the above steps to edit other spaces.
+                </h4>
+                <h4>
+                    Remember to save your progress (Ctrl + S)<br>
+                    NOTE: BrawlCrate might not recognise change(s) has been made. 
+                    In this case, change any one of the space's position in the model preview.
+                </h4>
+            </ol>
+        </p>
+    </div>
+    <div id="bot_nav">
+        <a href="https://hbrohei.github.io/"><img src="https://hbrohei.github.io/Nav/main_yt_logo.jpg"></a>
+        <a href="https://hbrohei.github.io/MiniStarCenter/" class="bot_nav_btn">Back to main page</a>
+        <hr style="border-color:#4e74e6">
+        <div id="div_quote"></div>
+    </div>
+    <script src="https://hbrohei.github.io/MiniStarCenter/msg.js"></script>
+</body>
+
+</html>

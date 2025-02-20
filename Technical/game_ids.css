@@ -14,13 +14,8 @@ body {
     color:white;
 }
 
-#cus_bd_tut_div{
-    width:100%;
-    text-align: center;
-}
-#cus_bd_tut_div a{
-    padding:2%;
-    background-color: #c0ed45;
+#main_div{
+    padding:0.5em;
 }
 
 @media only screen and (min-width: 600px){
@@ -71,51 +66,7 @@ table, td, th{
     border-style:solid;
 }
 
-#iframe_div{
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-    width:100%;
+th{
+    background-color: lightgrey;
 }
 
-#ifr_xls{
-    position: absolute;
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width:100%;
-    height:100%;
-    
-    overflow:hidden;
-}
-
-#van_bd_list_div{
-    display:grid;
-    grid-template-columns: 50% 50%;
-    text-align:center;
-}
-.bd_btn{
-    margin:3%;
-    padding-top:3%;
-    padding-bottom:3%;
-    width:90%;
-    text-decoration: none;
-    border-color: black;
-    border-width: 10%;
-    border-style: solid;
-    border-radius: 0.5em;
-}
-
-#a_bd01{
-    background: #dfff80;
-    color:black;
-}
-#a_bd02{
-    background: #f8ffe3;
-    color:black;
-}
-#a_bd03{
-    background: #bb8bc7;
-    color:black;
-}
